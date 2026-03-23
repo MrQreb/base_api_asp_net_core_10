@@ -10,7 +10,7 @@ public class UserResponseDto
     public bool     IsActive  { get; init; }
     public DateTime CreatedAt { get; init; }
 
-    // Método de mapeo estático — sin AutoMapper, sin dependencias extra
+    // Metodo para mapeo
     public static UserResponseDto FromEntity(User user) => new()
     {
         Id        = user.Id,
