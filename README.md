@@ -45,7 +45,32 @@ Esta organización en módulos facilita el mantenimiento, la escalabilidad y el 
 
 ***Nota***: Para más información sobre la arquitectura, leer la [documentación](/Documentation/1-Arquitectura.md), dando click.
 
+## Levantar proyecto
 
+1 - Instalar depedencias.
+
+```code
+dotnet restore
+```
+
+
+2 - Verficar que proyecto compile.
+
+```code
+dotnet build
+```
+
+3 - Copiar el archivo ** appsettings.DevelopmentExample.json ** en la raiz y renombrar a ** appsettings.Development.json **.
+
+4 - Hacer la migración 
+```
+dotnet ef database update --context AppDbContext
+```
+
+5 - Levantar el proyecto
+```
+dotnet watch run
+```
 
 ## Ver documentacion con Scalar
 
