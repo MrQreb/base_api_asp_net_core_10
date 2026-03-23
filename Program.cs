@@ -1,5 +1,6 @@
 using Scalar.AspNetCore;
 using WepAPI.Src;
+using WepAPI.Src.Config;
 
 namespace WepAPI;
 
@@ -17,11 +18,12 @@ public class Program
         var app = builder.Build();
 
         //Scalar configuration
-        if (app.Environment.IsDevelopment())
-        {
-            app.MapOpenApi();
-            app.MapScalarApiReference();
-        }
+        DeveloperToolsConfiguration.UseDevelopmentTools(app);
+        // if (app.Environment.IsDevelopment())
+        // {
+        //     app.MapOpenApi();
+        //     app.MapScalarApiReference();
+        // }
 
         app.UseHttpsRedirection();
         app.UseAuthorization();

@@ -4,8 +4,19 @@ using WepAPI.Src.Modules.Users.Entities;
 
 namespace WepAPI.Src.Database.Configurations;
 
+
+
+/// <summary>
+/// Configuración de la entidad User en la base de datos.
+/// </summary>
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {
+
+    /// <summary>
+    /// Configura la estructura de la tabla, columnas, índices y restricciones
+    /// para la entidad User.
+    /// </summary>
+    /// <param name="builder">Constructor de la entidad User.</param>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.ToTable("users");
