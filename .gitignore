@@ -1,0 +1,9 @@
+# Compilación
+bin/
+obj/
+
+# Configuración local con secrets
+appsettings.Development.json
+
+# Archivo de pruebas HTTP local
+*.http
