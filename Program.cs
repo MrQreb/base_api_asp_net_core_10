@@ -1,4 +1,3 @@
-using Scalar.AspNetCore;
 using WepAPI.Src;
 using WepAPI.Src.Config;
 
