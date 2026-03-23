@@ -6,7 +6,8 @@ public static class DatabaseConfiguration
 {
     public static IServiceCollection DatabaseModule(
         this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration
+    )
     {
         services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(
