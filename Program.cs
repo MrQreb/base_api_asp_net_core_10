@@ -19,12 +19,7 @@ public class Program
 
         //Scalar configuration
         DeveloperToolsConfiguration.UseDevelopmentTools(app);
-        // if (app.Environment.IsDevelopment())
-        // {
-        //     app.MapOpenApi();
-        //     app.MapScalarApiReference();
-        // }
-
+   
         app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();
