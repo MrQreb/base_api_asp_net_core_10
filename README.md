@@ -1,5 +1,5 @@
 
-# API en ASP.NET core v9.0.4
+# API en ASP.NET core v 10
 
 <div style="display: flex; justify-content: center;">
   <img src="https://svgl.app/library/csharp.svg" width="50" alt="C# Logo">
