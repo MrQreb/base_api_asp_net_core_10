@@ -7,11 +7,12 @@ public static class AppModule
 {
     public static IServiceCollection AddAppModules(
         this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration
+    )
     {
         services
-            .AddDatabase(configuration) 
-            .AddUsersModule();
+            .DatabaseModule(configuration) 
+            .UserModule();
         return services;
     }
 }

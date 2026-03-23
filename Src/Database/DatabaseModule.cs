@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WepAPI.Src.Database;
 
-public static class DatabaseModule
+public static class DatabaseConfiguration
 {
-    public static IServiceCollection AddDatabase(
+    public static IServiceCollection DatabaseModule(
         this IServiceCollection services,
         IConfiguration configuration)
     {
