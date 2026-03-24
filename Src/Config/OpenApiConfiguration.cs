@@ -44,7 +44,7 @@ namespace WepAPI.Src.Config
                 });
             });
 
-            return services;
+        return services;
         }
 
         /// <summary>
