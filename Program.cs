@@ -10,16 +10,24 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllers();
-        builder.Services.AddOpenApi();
+
+        //Configuracion del versionamiento de api
+        builder.Services.AddVersioning();
+
+        builder.Services.AddOpenApiConfiguration();  
         
-        builder.Services.AddAppModules(builder.Configuration); 
+        //Leer los modulos
+        builder.Services.AddAppModules(builder.Configuration);
 
         var app = builder.Build();
 
-        //Scalar configuration
-        DeveloperToolsConfiguration.UseDevelopmentTools(app);
-   
-        app.UseHttpsRedirection();
+        //Configuracion de lenvatar el versionamiento
+        app.UseOpenApiConfig();
+
+        //Configuracion de Scalar y mas
+        app.UseDevelopmentTools();
+
+        // app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();
 

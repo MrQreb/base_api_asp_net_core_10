@@ -75,5 +75,5 @@ dotnet watch run
 ## Ver documentacion con Scalar
 
 ```code
-http://localhost:5063/scalar/v1
+http://localhost:5063/docs
 ```

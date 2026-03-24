@@ -21,8 +21,20 @@ namespace WepAPI.Src.Config
         {
             if (app.Environment.IsDevelopment())
             {
-                app.MapOpenApi();
-                app.MapScalarApiReference();
+
+
+                app.MapScalarApiReference("/docs", options =>
+                {
+                    options.WithTitle("Nombre generico API")
+                        .ForceDarkMode()
+                        .HideSearch()
+                        .SortTagsAlphabetically()
+                        .ShowOperationId()
+                        .WithOpenApiRoutePattern("/openapi/{documentName}.json")
+                        .AddDocument("v1",isDefault: true)
+                        .AddDocument("v2");
+
+                });
             }
 
             return app;

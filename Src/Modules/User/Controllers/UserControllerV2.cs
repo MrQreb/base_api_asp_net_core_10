@@ -4,12 +4,15 @@ using WepAPI.Src.Modules.Users.Dtos;
 namespace WepAPI.Src.Modules.Users;
 
 [ApiController]
-[Route("api/users")]
-public class UsersController : ControllerBase
+[ApiVersion("2.0")]
+[Route("api/v{version:apiVersion}/users")]
+[Tags("Users V2")]
+
+public class UsersControllerV2 : ControllerBase
 {
     private readonly UsersService _usersService;
 
-    public UsersController(UsersService usersService)
+    public UsersControllerV2(UsersService usersService)
     {
         _usersService = usersService;
     }
